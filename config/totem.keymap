@@ -20,33 +20,7 @@
 #define Game        4
 #define Gameplus    5
 
-&mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-};
-
-&lt {
-    tapping-term-ms = <240>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
-};
-
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
     combos { compatible = "zmk,combos"; };
 
     keymap {
@@ -55,10 +29,10 @@
         Base {
             display-name = "Base";
             bindings = <
-       &kp Q    &kp W    &kp E          &kp R         &kp T        &kp Y    &kp U       &kp I      &kp O    &kp P
-       &hm A A  &hm S S  &hm D D        &hm LSHIFT F  &kp G        &kp H    &hm J J     &hm K K    &hm L L  &hm RGUI SEMICOLON
-&none  &kp Z    &kp X    &kp C          &kp V         &kp B        &kp N    &kp M       &kp COMMA  &kp DOT  &kp SLASH           &none
-                         &mt LCTRL DEL  &lt 0 TAB     &kp SPACE    &kp RET  &lt 0 BSPC  &kp MINUS
+       &kp Q  &kp W  &kp E          &kp R      &kp T        &kp Y    &kp U       &kp I      &kp O    &kp P
+       &kp A  &kp S  &kp D          &kp F      &kp G        &kp H    &kp J       &kp K      &kp L    &none
+&none  &kp Z  &kp X  &kp C          &kp V      &kp B        &kp N    &kp M       &kp COMMA  &kp DOT  &kp SLASH  &none
+                     &mt LCTRL DEL  &lt 0 TAB  &kp SPACE    &kp RET  &lt 0 BSPC  &kp MINUS
             >;
         };
     };
