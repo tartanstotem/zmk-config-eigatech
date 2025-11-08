@@ -31,7 +31,7 @@
             bindings = <
        &kp Q  &kp W  &kp E          &kp R      &kp T        &kp Y    &kp U       &kp I      &kp O    &kp P
        &kp A  &kp S  &kp D          &kp F      &kp G        &kp H    &kp J       &kp K      &kp L    &none
-&none  &kp Z  &kp X  &kp C          &kp V      &kp B        &kp N    &kp M       &kp COMMA  &kp DOT  &kp SLASH  &none
+&kp A  &kp Z  &kp X  &kp C          &kp V      &kp B        &kp N    &kp M       &kp COMMA  &kp DOT  &kp SLASH  &none
                      &mt LCTRL DEL  &lt 0 TAB  &kp SPACE    &kp RET  &lt 0 BSPC  &kp MINUS
             >;
         };
