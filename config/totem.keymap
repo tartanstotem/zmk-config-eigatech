@@ -47,12 +47,19 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        mac_spotlight {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <11 12 13>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
-        Base {
+        Main {
             display-name = "Base";
             bindings = <
               &kp Q       &kp W       &kp E          &kp R         &kp T        &kp Y    &kp U        &kp I        &kp O       &kp P
@@ -75,14 +82,14 @@
         Sym {
             display-name = "Sym";
             bindings = <
-                &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
-                &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans           &trans   &trans
-&studio_unlock  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
-                                  &trans    &trans      &trans         &trans     &trans         &trans
+        &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
+        &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans           &trans   &trans
+&trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &trans
+                          &trans    &trans      &trans         &trans     &trans         &trans
             >;
         };
 
-        layer_3 {
+        Blt {
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
