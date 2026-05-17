@@ -54,6 +54,16 @@
             bindings = <&kp LG(SPACE)>;
             key-positions = <11 12 13>;
         };
+
+        Front {
+            bindings = <&kp LC(A)>;
+            key-positions = <1 0>;
+        };
+
+        End {
+            bindings = <&kp LC(E)>;
+            key-positions = <9 8>;
+        };
     };
 
     keymap {
@@ -64,7 +74,7 @@
             bindings = <
               &kp Q       &kp W       &kp E             &kp R         &kp T        &kp Y    &kp U        &kp I        &kp O       &kp P
               &hm LGUI A  &hm LALT S  &hm LCTRL D       &hm LSHIFT F  &kp G        &kp H    &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMICOLON
-&lt 3 ESCAPE  &kp Z       &kp X       &kp C             &kp V         &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp SLASH           &kp APOSTROPHE
+&lt 0 ESCAPE  &kp Z       &kp X       &kp C             &kp V         &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp SLASH           &kp APOSTROPHE
                                       &mt LEFT_GUI DEL  &lt 1 TAB     &kp SPACE    &kp RET  &lt 2 BSPC   &kp MINUS
             >;
         };
@@ -72,7 +82,7 @@
         Nav {
             display-name = "Nav";
             bindings = <
-              &kp TILDE       &trans     &kp UP_ARROW  &trans     &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+              &kp GRAVE       &kp TILDE  &kp UP_ARROW  &trans     &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
               &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
 &kp LEFT_ALT  &kp LEFT_WIN    &kp MINUS  &trans        &kp PLUS   &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
                                          &trans        &trans     &trans      &trans    &trans        &kp DOT
@@ -84,20 +94,9 @@
             bindings = <
         &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
         &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans           &trans   &trans
-&trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &trans
+&trans  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp BACKSLASH  &trans
                           &trans    &trans      &trans         &trans     &trans         &trans
             >;
-        };
-
-        Blt {
-            bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "Blt";
         };
     };
 };
